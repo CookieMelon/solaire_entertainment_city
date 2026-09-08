@@ -17,6 +17,7 @@ dependencies:
     - paragraphs.paragraphs_type.tabs_content_by_reference
     - paragraphs.paragraphs_type.tabs_content_by_view
     - paragraphs.paragraphs_type.testimonial_cards
+    - paragraphs.paragraphs_type.webform_block
   module:
     - entity_reference_revisions
 id: node.landing_page.field_section
@@ -40,6 +41,7 @@ settings:
       image_and_text: image_and_text
       side_by_side_content: side_by_side_content
       tabs_content_by_reference: tabs_content_by_reference
+      webform_block: webform_block
       highlight_cards: highlight_cards
       icon_cards: icon_cards
       tabs_content_by_view: tabs_content_by_view
@@ -115,5 +117,8 @@ settings:
         enabled: false
       testimonial_cards:
         weight: 40
+        enabled: true
+      webform_block:
+        weight: 25
         enabled: true
 field_type: entity_reference_revisions
