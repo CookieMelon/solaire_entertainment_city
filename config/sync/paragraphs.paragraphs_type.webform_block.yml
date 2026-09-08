@@ -1,0 +1,10 @@
+uuid: 0d1c4f74-aab0-4c09-b35d-763470eed90b
+langcode: en
+status: true
+dependencies: {  }
+id: webform_block
+label: 'Webform Block'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
