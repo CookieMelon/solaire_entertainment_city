@@ -1,0 +1,22 @@
+uuid: 0983922f-9021-46b4-a467-89ada14f6cc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_left_content
+    - paragraphs.paragraphs_type.side_by_side_content
+  module:
+    - text
+id: paragraph.side_by_side_content.field_left_content
+field_name: field_left_content
+entity_type: paragraph
+bundle: side_by_side_content
+label: 'Left Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

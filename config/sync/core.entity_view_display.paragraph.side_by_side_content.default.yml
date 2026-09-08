@@ -1,0 +1,42 @@
+uuid: 33b9802a-ebcd-48e2-93ea-d650dc9b039f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.side_by_side_content.field_left_content
+    - field.field.paragraph.side_by_side_content.field_right_content
+    - field.field.paragraph.side_by_side_content.field_text_alignment
+    - field.field.paragraph.side_by_side_content.field_title
+    - paragraphs.paragraphs_type.side_by_side_content
+  module:
+    - text
+id: paragraph.side_by_side_content.default
+targetEntityType: paragraph
+bundle: side_by_side_content
+mode: default
+content:
+  field_left_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_right_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_text_alignment: true

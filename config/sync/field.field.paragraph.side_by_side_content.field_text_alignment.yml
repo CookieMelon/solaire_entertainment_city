@@ -1,0 +1,23 @@
+uuid: b2f54b4e-f097-414e-b258-1fa453ffd27b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_alignment
+    - paragraphs.paragraphs_type.side_by_side_content
+  module:
+    - options
+id: paragraph.side_by_side_content.field_text_alignment
+field_name: field_text_alignment
+entity_type: paragraph
+bundle: side_by_side_content
+label: 'Text Alignment'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,31 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json
+
+name: Side by Side
+description: A reusable Side by Side layout
+status: stable
+
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+      description: The card title.
+    textAlignment:
+      type: string
+      title: Text Alignment
+      description: The alignment of the text within the card.
+    leftContent:
+      type: string
+      title: Left Content
+      description: The content to display on the left side of the card.
+    rightContent:
+      type: string
+      title: Right Content
+      description: The content to display on the right side of the card.
+
