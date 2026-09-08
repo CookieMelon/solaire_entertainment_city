@@ -13,6 +13,7 @@ dependencies:
     - paragraphs.paragraphs_type.image_gallery
     - paragraphs.paragraphs_type.information_block
     - paragraphs.paragraphs_type.promotions
+    - paragraphs.paragraphs_type.side_by_side_content
     - paragraphs.paragraphs_type.tabs_content_by_reference
     - paragraphs.paragraphs_type.tabs_content_by_view
     - paragraphs.paragraphs_type.testimonial_cards
@@ -37,6 +38,7 @@ settings:
       accordion: accordion
       block: block
       image_and_text: image_and_text
+      side_by_side_content: side_by_side_content
       tabs_content_by_reference: tabs_content_by_reference
       highlight_cards: highlight_cards
       icon_cards: icon_cards
@@ -92,6 +94,9 @@ settings:
         enabled: false
       promotions:
         weight: 9
+        enabled: true
+      side_by_side_content:
+        weight: 24
         enabled: true
       tabs_content_by_reference:
         weight: 24

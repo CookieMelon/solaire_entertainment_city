@@ -1,0 +1,22 @@
+uuid: ba104d06-ed44-4156-939a-86521d45f16e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_right_content
+    - paragraphs.paragraphs_type.side_by_side_content
+  module:
+    - text
+id: paragraph.side_by_side_content.field_right_content
+field_name: field_right_content
+entity_type: paragraph
+bundle: side_by_side_content
+label: 'Right Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

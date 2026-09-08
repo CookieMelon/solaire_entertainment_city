@@ -1,0 +1,39 @@
+.side-by-side-information {
+  width: 100%;
+}
+
+.side-by-side-information--header {
+  margin-bottom: 1rem;
+}
+
+.side-by-side-information--header h2 {
+  margin: 0;
+}
+
+.side-by-side-information--items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.side-by-side-information--item h3 {
+  margin: 0 0 2rem;
+}
+
+.side-by-side-information--content {
+  margin-bottom: 2rem;
+}
+
+.side-by-side-information--content p {
+  margin: 0;
+}
+
+.side-by-side-information--link {
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+  .side-by-side-information--items {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,10 @@
+uuid: cd044269-9c3b-4d4b-86db-3c460f446438
+langcode: en
+status: true
+dependencies: {  }
+id: side_by_side_content
+label: 'Side-by-side Content'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -17,31 +17,49 @@ id: contact
 title: Contact
 description: 'Basic email contact webform.'
 categories: {  }
-elements: |
-  name:
-    '#title': 'Your Name'
-    '#type': textfield
+elements: |-
+  flexbox:
+    '#type': webform_flexbox
+    salutation:
+      '#type': select
+      '#title': Salutation
+      '#options':
+        Mr: MR.
+        Ms: MS.
+      '#required': true
+      '#required_error': 'Salutation is required.'
+    name:
+      '#title': 'Your Name'
+      '#type': textfield
+      '#required': true
+      '#default_value': '[current-user:display-name]'
+    email:
+      '#title': 'Your Email'
+      '#type': email
+      '#required': true
+      '#default_value': '[current-user:mail]'
+  flexbox_01:
+    '#type': webform_flexbox
+    contact_number:
+      '#type': tel
+      '#title': 'Contact Number'
+      '#required': true
+      '#required_error': 'Contact Number is required.'
+      '#international': true
+      '#international_initial_country': PH
+    message:
+      '#title': Message
+      '#type': textarea
+      '#required': true
+      '#test': 'Please ignore this email.'
+  i_affirm:
+    '#type': checkbox
+    '#title': "By supplying information via this form and clicking submit, I affirm that I have read, understood and hereby accept the terms of Solaire's Privacy Policy and that I hereby consent to the collection, storage, and processing by Solaire and any third party it authorizes, including its affiliates and their respective officers, employees, agents, representatives and personnel of such information disclosed."
     '#required': true
-    '#default_value': '[current-user:display-name]'
-  email:
-    '#title': 'Your Email'
-    '#type': email
-    '#required': true
-    '#default_value': '[current-user:mail]'
-  subject:
-    '#title': Subject
-    '#type': textfield
-    '#required': true
-    '#test': 'Testing contact webform from [site:name]'
-  message:
-    '#title': Message
-    '#type': textarea
-    '#required': true
-    '#test': 'Please ignore this email.'
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
-    '#submit__label': 'Send message'
+    '#submit__label': Submit
 css: ''
 javascript: ''
 settings:
