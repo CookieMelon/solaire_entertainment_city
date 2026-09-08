@@ -23,7 +23,7 @@ base:
       css/components/field.css:
         weight: -10
       css/components/form.css:
-        weight: -10
+        weight: 1
       css/components/icons.css:
         weight: -10
       css/components/inline-form.css:

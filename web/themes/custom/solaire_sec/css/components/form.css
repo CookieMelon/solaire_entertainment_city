@@ -102,3 +102,8 @@ abbr.ajax-changed {
   background: url(../../images/icons/error.svg) no-repeat;
   background-size: contain;
 }
+
+.form-item__description {
+  max-width: 100%;
+  text-wrap: wrap;
+}

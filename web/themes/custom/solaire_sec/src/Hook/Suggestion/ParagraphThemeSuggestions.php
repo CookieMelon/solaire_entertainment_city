@@ -10,7 +10,7 @@ use Drupal\paragraphs\ParagraphInterface;
  */
 class ParagraphThemeSuggestions {
   /**
-   * Implements hook_preprocess_node().
+   * Implements hook_suggestions_paragraph_alter().
    */
   #[Hook('theme_suggestions_paragraph_alter')]
   public function paragraphAlter(array &$suggestions, array $variables): void {
