@@ -1,18 +1,18 @@
-uuid: a2f98770-b9ef-401f-a1c8-05ba990c123a
+uuid: 749d4b08-e1d4-4439-b8e8-843c7c1257ee
 langcode: en
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.promotions
+    - paragraphs.paragraphs_type.side_by_side_content
   module:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: true
+    enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: paragraph.promotions
+id: paragraph.side_by_side_content
 target_entity_type_id: paragraph
-target_bundle: promotions
+target_bundle: side_by_side_content
 default_langcode: site_default
-language_alterable: true
+language_alterable: false

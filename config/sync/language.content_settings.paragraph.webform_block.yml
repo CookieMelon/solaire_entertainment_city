@@ -1,18 +1,18 @@
-uuid: a2f98770-b9ef-401f-a1c8-05ba990c123a
+uuid: f9f654d8-b754-46c8-95de-0dc7f5effb8d
 langcode: en
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.promotions
+    - paragraphs.paragraphs_type.webform_block
   module:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: true
+    enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: paragraph.promotions
+id: paragraph.webform_block
 target_entity_type_id: paragraph
-target_bundle: promotions
+target_bundle: webform_block
 default_langcode: site_default
-language_alterable: true
+language_alterable: false

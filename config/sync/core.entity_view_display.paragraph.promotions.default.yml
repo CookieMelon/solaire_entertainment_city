@@ -3,8 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.promotions.field_class
     - field.field.paragraph.promotions.field_content
     - field.field.paragraph.promotions.field_display_layout
+    - field.field.paragraph.promotions.field_id
     - field.field.paragraph.promotions.field_is_slider
     - field.field.paragraph.promotions.field_referenced_content_items
     - field.field.paragraph.promotions.field_slide_per_view
@@ -42,12 +44,30 @@ targetEntityType: paragraph
 bundle: promotions
 mode: default
 content:
+  field_class:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 6
+    region: content
   field_content:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_is_slider:
     type: boolean

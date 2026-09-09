@@ -1,16 +1,16 @@
-uuid: abb375bb-6be7-446d-9aff-89b8bcb7967b
+uuid: f1b46b55-232e-40ea-a1ad-328910e1eae6
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_title
+    - field.storage.paragraph.field_id
     - paragraphs.paragraphs_type.promotions
-id: paragraph.promotions.field_title
-field_name: field_title
+id: paragraph.promotions.field_id
+field_name: field_id
 entity_type: paragraph
 bundle: promotions
-label: Heading
-description: ''
+label: ID
+description: 'Use this field to add a custom ID for this component.'
 required: false
 translatable: true
 default_value: {  }
