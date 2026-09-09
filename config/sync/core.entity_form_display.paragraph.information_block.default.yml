@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.information_block.field_class
     - field.field.paragraph.information_block.field_content
+    - field.field.paragraph.information_block.field_id
     - field.field.paragraph.information_block.field_title
     - paragraphs.paragraphs_type.information_block
   module:
@@ -13,12 +15,28 @@ targetEntityType: paragraph
 bundle: information_block
 mode: default
 content:
+  field_class:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_content:
     type: text_textarea
-    weight: 1
+    weight: 3
     region: content
     settings:
       rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_id:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_title:

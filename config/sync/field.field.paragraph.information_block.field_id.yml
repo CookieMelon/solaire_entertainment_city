@@ -1,0 +1,19 @@
+uuid: faf7a6cb-c9b0-436c-b6d3-74cea63e502e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_id
+    - paragraphs.paragraphs_type.information_block
+id: paragraph.information_block.field_id
+field_name: field_id
+entity_type: paragraph
+bundle: information_block
+label: ID
+description: 'Use this field to add a custom ID for this component.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
