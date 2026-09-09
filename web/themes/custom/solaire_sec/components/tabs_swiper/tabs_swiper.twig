@@ -1,4 +1,4 @@
-<div class="wrap tabs-component">
+<div class="wrap tabs-swiper-component">
   <div class="heading {{ textAlignment }}">
     <h2>{{ title }}</h2>
 
@@ -7,7 +7,6 @@
     {% endif %}
   </div>
   
-
   <ul class="tabs" role="tablist">
     <li>
       <button 
@@ -19,7 +18,7 @@
       </button>
     </li>
     {% for tab in tabItem %}
-      {% if tab.views_block or tab.content %}
+      {% if tab.content %}
         <li>
           <button 
             class="tab-btn" 
@@ -36,10 +35,22 @@
 
   {% for tab in tabItem %}
     <div class="panel active" id="{{ tab.heading_slug }}">
-      {% if tab.views_block %}
-        {{ tab.views_block }}
-      {% else %}
-        {{ dump(tab.content)|raw }}
+      {% if tab.content %}
+        {% embed 'solaire_sec:swiper' with {
+          cardItem: tab.content,
+          slidesPerView: 3
+        } %}
+
+          {% block pagination %}
+          {% endblock %}
+
+          {# {% block navigation %}
+          {% endblock %} #}
+
+          {% block scrollbar %}
+          {% endblock %}
+
+        {% endembed %}
       {% endif %}
     </div>
   {% endfor %}
