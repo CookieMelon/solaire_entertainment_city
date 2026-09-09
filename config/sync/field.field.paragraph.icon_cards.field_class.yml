@@ -1,0 +1,19 @@
+uuid: fc2a17a8-1de2-4dab-a161-cf507fde6ab3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_class
+    - paragraphs.paragraphs_type.icon_cards
+id: paragraph.icon_cards.field_class
+field_name: field_class
+entity_type: paragraph
+bundle: icon_cards
+label: Class
+description: 'Use this field to add a custom class for this component.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

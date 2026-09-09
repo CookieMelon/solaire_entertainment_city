@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.icon_cards.field_class
     - field.field.paragraph.icon_cards.field_content
+    - field.field.paragraph.icon_cards.field_id
     - field.field.paragraph.icon_cards.field_referenced_content_items
     - field.field.paragraph.icon_cards.field_text_alignment
     - field.field.paragraph.icon_cards.field_title
@@ -16,12 +18,28 @@ targetEntityType: paragraph
 bundle: icon_cards
 mode: default
 content:
+  field_class:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_content:
     type: text_textarea
-    weight: 2
+    weight: 1
     region: content
     settings:
       rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_id:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_referenced_content_items:
@@ -44,13 +62,13 @@ content:
     third_party_settings: {  }
   field_text_alignment:
     type: options_select
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   field_title:
     type: string_textfield
-    weight: 1
+    weight: 0
     region: content
     settings:
       size: 60

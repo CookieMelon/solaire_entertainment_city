@@ -48,6 +48,7 @@
   ]
 %}
 {% block paragraph %}
+<section id="{{ sectionId }}" class="section {{ sectionClass }}">
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
       {% embed 'solaire_sec:card_icon' with {
@@ -59,4 +60,5 @@
       {% endembed %}
     {% endblock %}
   </div>
+</section>
 {% endblock paragraph %}
