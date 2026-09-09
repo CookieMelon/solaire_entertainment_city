@@ -126,6 +126,16 @@ class ParagraphPreprocess implements ContainerInjectionInterface {
       $variables['slidesPerView'] = ($slides === '') ? 3 : (int) $slides;
     }
 
+    // Custom ID
+    if ($id = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_id', $this->entityRepository)) {
+      $variables['sectionId'] = $id;
+    }
+
+    // Custom CSS Class
+    if ($class = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_class', $this->entityRepository)) {
+      $variables['sectionClass'] = $class;
+    }
+
     // Tabs Content by View.
     if ($paragraph->bundle() === 'tabs_content_by_view') {
       $builder = new TabsContentByViewVariablesBuilder(

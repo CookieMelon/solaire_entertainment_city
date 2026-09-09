@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.hero_cover
+    - field.field.paragraph.accordion.field_class
     - field.field.paragraph.accordion.field_content
+    - field.field.paragraph.accordion.field_id
     - field.field.paragraph.accordion.field_referenced_content_items
     - field.field.paragraph.accordion.field_text_alignment
     - field.field.paragraph.accordion.field_title
@@ -33,5 +35,7 @@ content:
     weight: 0
     region: ds_content
 hidden:
+  field_class: true
+  field_id: true
   field_referenced_content_items: true
   field_text_alignment: true
