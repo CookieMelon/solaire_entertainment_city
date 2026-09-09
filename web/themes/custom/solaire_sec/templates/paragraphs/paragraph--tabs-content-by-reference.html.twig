@@ -8,6 +8,7 @@
   ]
 %}
 {% block paragraph %}
+<section id="{{ sectionId }}" class="section {{ sectionClass }}">
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
       {% embed 'solaire_sec:tabs_swiper' with {
@@ -19,4 +20,5 @@
       {% endembed %}
     {% endblock %}
   </div>
+</section>
 {% endblock paragraph %}
