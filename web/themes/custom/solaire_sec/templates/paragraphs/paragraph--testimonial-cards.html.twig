@@ -49,6 +49,7 @@
   ]
 %}
 {% block paragraph %}
+<section id="{{ sectionId }}" class="section {{ sectionClass }}">
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
       {% set slidesPerView = 3 %}
@@ -98,4 +99,5 @@
 
     {% endblock %}
   </div>
+</section>
 {% endblock paragraph %}
