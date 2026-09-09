@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.card
+    - field.field.paragraph.accordion.field_class
     - field.field.paragraph.accordion.field_content
+    - field.field.paragraph.accordion.field_id
     - field.field.paragraph.accordion.field_referenced_content_items
     - field.field.paragraph.accordion.field_text_alignment
     - field.field.paragraph.accordion.field_title
@@ -69,5 +71,7 @@ content:
     weight: 4
     region: content
 hidden:
+  field_class: true
   field_content: true
+  field_id: true
   field_title: true

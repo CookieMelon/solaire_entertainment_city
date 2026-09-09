@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.hero_slider
+    - field.field.paragraph.highlight_cards.field_class
     - field.field.paragraph.highlight_cards.field_content
+    - field.field.paragraph.highlight_cards.field_id
     - field.field.paragraph.highlight_cards.field_referenced_content_items
     - field.field.paragraph.highlight_cards.field_text_alignment
     - field.field.paragraph.highlight_cards.field_title
@@ -33,5 +35,7 @@ content:
     weight: 1
     region: ds_content
 hidden:
+  field_class: true
+  field_id: true
   field_referenced_content_items: true
   field_text_alignment: true
