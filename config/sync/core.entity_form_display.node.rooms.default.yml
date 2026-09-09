@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.rooms.field_banner
     - field.field.node.rooms.field_featured_on_frontpage_bann
     - field.field.node.rooms.field_mobile_thumbnail
+    - field.field.node.rooms.field_room_code
     - field.field.node.rooms.field_section
     - field.field.node.rooms.field_teaser_summary
     - image.style.thumbnail
@@ -41,7 +42,6 @@ third_party_settings:
       children:
         - field_featured_on_frontpage_bann
         - field_banner
-        - field_mobile_banner
         - field_mobile_thumbnail
       label: Banner
       region: content
@@ -76,6 +76,7 @@ third_party_settings:
       children:
         - title
         - field_teaser_summary
+        - field_room_code
       label: 'Page Information'
       region: content
       parent_name: group_main
@@ -152,6 +153,14 @@ content:
     third_party_settings:
       imce:
         enabled: true
+  field_room_code:
+    type: string_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_section:
     type: paragraphs
     weight: 12

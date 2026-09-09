@@ -6,7 +6,7 @@ dependencies:
     - field.storage.node.field_section
     - node.type.landing_page
     - paragraphs.paragraphs_type.accordion
-    - paragraphs.paragraphs_type.block
+    - paragraphs.paragraphs_type.block_views
     - paragraphs.paragraphs_type.highlight_cards
     - paragraphs.paragraphs_type.icon_cards
     - paragraphs.paragraphs_type.image_and_text
@@ -37,12 +37,12 @@ settings:
       information_block: information_block
       promotions: promotions
       accordion: accordion
-      block: block
       image_and_text: image_and_text
+      block_views: block_views
       side_by_side_content: side_by_side_content
       tabs_content_by_reference: tabs_content_by_reference
-      webform_block: webform_block
       highlight_cards: highlight_cards
+      webform_block: webform_block
       icon_cards: icon_cards
       tabs_content_by_view: tabs_content_by_view
       image_gallery: image_gallery
@@ -60,10 +60,10 @@ settings:
         enabled: false
       block:
         weight: 12
-        enabled: true
+        enabled: false
       block_views:
         weight: 17
-        enabled: false
+        enabled: true
       highlight_card_item:
         weight: 19
         enabled: false
