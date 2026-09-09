@@ -83,7 +83,7 @@ class TabsContentByViewVariablesBuilder {
           $view = $items['content']['#view'] ?? NULL;
           // Add a validation if views is empty.
           if ($view instanceof ViewExecutable && $view->total_rows > 0) {
-            $result['tab_content_items'][$parItem->id()]['views_block'] = $items;  
+            $result['tab_content_items'][$parItem->id()]['views_block'] = $items;
           }
         }
       }
