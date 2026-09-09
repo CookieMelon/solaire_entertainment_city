@@ -19,6 +19,7 @@ use Drupal\solaire_sec\Hook\Preprocess\Paragraph\ParagraphHelper;
 use Drupal\Core\File\FileSystemInterface;
 use Drupal\Core\File\FileUrlGeneratorInterface;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\TabsContentByViewVariablesBuilder;
+use Drupal\solaire_sec\Hook\Preprocess\Paragraph\TabsContentByReferenceVariablesBuilder;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\TestimonialCardsVariablesBuilder;
 use Psr\Container\ContainerInterface;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\InformationBlock;
@@ -194,6 +195,15 @@ class ParagraphPreprocess implements ContainerInjectionInterface {
         $this->entityRepository
       );
       $variables = array_merge($variables, $builder->buildImageGalleryVariables($paragraph));
+    }
+
+    // Tabs Content by Reference.
+    if ($paragraph->bundle() === 'tabs_content_by_reference') {
+      $builder = new TabsContentByReferenceVariablesBuilder(
+        $this->entityTypeManager,
+        $this->entityRepository
+      );
+      $variables = array_merge($variables, $builder->buildTabsContentByReferenceVariables($paragraph));
     }
 
     return $variables;

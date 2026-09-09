@@ -4,8 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.hero_cover
+    - field.field.paragraph.tabs_content_by_reference.field_class
     - field.field.paragraph.tabs_content_by_reference.field_content
+    - field.field.paragraph.tabs_content_by_reference.field_id
     - field.field.paragraph.tabs_content_by_reference.field_referenced_content_items
+    - field.field.paragraph.tabs_content_by_reference.field_text_alignment
     - field.field.paragraph.tabs_content_by_reference.field_title
     - paragraphs.paragraphs_type.tabs_content_by_reference
   module:
@@ -32,4 +35,7 @@ content:
     weight: 0
     region: ds_content
 hidden:
+  field_class: true
+  field_id: true
   field_referenced_content_items: true
+  field_text_alignment: true
