@@ -1,0 +1,19 @@
+uuid: bad749ea-25c6-4a5f-b899-67b3795a69de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_id
+    - paragraphs.paragraphs_type.icon_cards
+id: paragraph.icon_cards.field_id
+field_name: field_id
+entity_type: paragraph
+bundle: icon_cards
+label: ID
+description: 'Use this field to add a custom ID for this component.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
