@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.card
+    - field.field.paragraph.promotions.field_class
     - field.field.paragraph.promotions.field_content
     - field.field.paragraph.promotions.field_display_layout
+    - field.field.paragraph.promotions.field_id
     - field.field.paragraph.promotions.field_is_slider
     - field.field.paragraph.promotions.field_referenced_content_items
     - field.field.paragraph.promotions.field_slide_per_view
@@ -120,4 +122,6 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-hidden: {  }
+hidden:
+  field_class: true
+  field_id: true

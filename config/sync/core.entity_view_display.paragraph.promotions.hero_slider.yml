@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.hero_slider
+    - field.field.paragraph.promotions.field_class
     - field.field.paragraph.promotions.field_content
     - field.field.paragraph.promotions.field_display_layout
+    - field.field.paragraph.promotions.field_id
     - field.field.paragraph.promotions.field_is_slider
     - field.field.paragraph.promotions.field_referenced_content_items
     - field.field.paragraph.promotions.field_slide_per_view
@@ -36,7 +38,9 @@ content:
     weight: 1
     region: ds_content
 hidden:
+  field_class: true
   field_display_layout: true
+  field_id: true
   field_is_slider: true
   field_referenced_content_items: true
   field_slide_per_view: true

@@ -49,6 +49,7 @@
 %}
 
 {% block paragraph %}
+<section id="{{ sectionId }}" class="section {{ sectionClass }}">
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
 
@@ -74,4 +75,5 @@
       {% endembed %}
     {% endblock %}
   </div>
+</section>
 {% endblock paragraph %}
