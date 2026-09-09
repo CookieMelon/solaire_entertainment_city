@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.side_by_side_content.field_class
+    - field.field.paragraph.side_by_side_content.field_id
     - field.field.paragraph.side_by_side_content.field_left_content
     - field.field.paragraph.side_by_side_content.field_right_content
     - field.field.paragraph.side_by_side_content.field_text_alignment
@@ -15,6 +17,24 @@ targetEntityType: paragraph
 bundle: side_by_side_content
 mode: default
 content:
+  field_class:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 5
+    region: content
   field_left_content:
     type: text_default
     label: hidden
