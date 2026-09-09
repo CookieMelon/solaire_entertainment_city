@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.image_gallery.field_class
     - field.field.paragraph.image_gallery.field_content
+    - field.field.paragraph.image_gallery.field_id
     - field.field.paragraph.image_gallery.field_referenced_content_items
     - field.field.paragraph.image_gallery.field_slide_type
     - field.field.paragraph.image_gallery.field_text_alignment
@@ -18,12 +20,30 @@ targetEntityType: paragraph
 bundle: image_gallery
 mode: default
 content:
+  field_class:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 6
+    region: content
   field_content:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_referenced_content_items:
     type: entity_reference_revisions_entity_view
