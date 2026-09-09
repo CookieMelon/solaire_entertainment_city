@@ -21,6 +21,7 @@ use Drupal\Core\File\FileUrlGeneratorInterface;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\TabsContentByViewVariablesBuilder;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\TestimonialCardsVariablesBuilder;
 use Psr\Container\ContainerInterface;
+use Drupal\solaire_sec\Hook\Preprocess\Paragraph\InformationBlock;
 
 class ParagraphPreprocess implements ContainerInjectionInterface {
   /**
@@ -146,6 +147,14 @@ class ParagraphPreprocess implements ContainerInjectionInterface {
         $this->entityRepository
       );
       $variables = array_merge($variables, $builder->buildTabsContentByViewVariables($paragraph));
+    }
+
+    if ($paragraph->bundle() === 'information_block') {
+      $builder = new InformationBlock(
+        $this->entityTypeManager,
+        $this->entityRepository
+      );
+      $variables = array_merge($variables, $builder->buildInformationBlockVariables($paragraph));
     }
 
     // Accordion.

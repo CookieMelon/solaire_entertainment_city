@@ -48,9 +48,14 @@
   ]
 %}
 {% block paragraph %}
+<section id="{{ sectionId }}" class="section {{ sectionClass }}">
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      {{ content }}
+      <h2 class="section-title">{{ information_block_title }}</h2>
+      <div class="section-content">
+        {{ information_block_content|raw }}
+      </div>
     {% endblock %}
   </div>
+</section>
 {% endblock paragraph %}

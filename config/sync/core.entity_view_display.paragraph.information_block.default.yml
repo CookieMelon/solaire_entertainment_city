@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.information_block.field_class
     - field.field.paragraph.information_block.field_content
+    - field.field.paragraph.information_block.field_id
     - field.field.paragraph.information_block.field_title
     - paragraphs.paragraphs_type.information_block
   module:
@@ -29,4 +31,6 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_class: true
+  field_id: true
