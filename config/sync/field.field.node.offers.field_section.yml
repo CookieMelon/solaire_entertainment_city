@@ -6,9 +6,18 @@ dependencies:
     - field.storage.node.field_section
     - node.type.offers
     - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.block_views
+    - paragraphs.paragraphs_type.highlight_cards
+    - paragraphs.paragraphs_type.icon_cards
+    - paragraphs.paragraphs_type.image_and_text
+    - paragraphs.paragraphs_type.image_gallery
     - paragraphs.paragraphs_type.information_block
     - paragraphs.paragraphs_type.promotions
+    - paragraphs.paragraphs_type.side_by_side_content
+    - paragraphs.paragraphs_type.tabs_content_by_reference
     - paragraphs.paragraphs_type.tabs_content_by_view
+    - paragraphs.paragraphs_type.testimonial_cards
+    - paragraphs.paragraphs_type.webform_block
   module:
     - entity_reference_revisions
 id: node.offers.field_section
@@ -28,12 +37,24 @@ settings:
       information_block: information_block
       accordion: accordion
       promotions: promotions
+      block_views: block_views
+      image_and_text: image_and_text
+      tabs_content_by_reference: tabs_content_by_reference
       tabs_content_by_view: tabs_content_by_view
+      highlight_cards: highlight_cards
+      icon_cards: icon_cards
+      image_gallery: image_gallery
+      side_by_side_content: side_by_side_content
+      testimonial_cards: testimonial_cards
+      webform_block: webform_block
     negate: 0
     target_bundles_drag_drop:
       accordion:
         weight: 7
         enabled: true
+      accordion_items:
+        weight: 26
+        enabled: false
       banner:
         weight: 4
         enabled: false
@@ -42,12 +63,27 @@ settings:
         enabled: false
       block_views:
         weight: 19
+        enabled: true
+      highlight_card_item:
+        weight: 31
         enabled: false
-      experience_signature:
-        weight: 6
+      highlight_cards:
+        weight: 30
+        enabled: true
+      icon_card_item:
+        weight: 33
+        enabled: false
+      icon_cards:
+        weight: 32
         enabled: true
       image_and_text:
         weight: 21
+        enabled: true
+      image_gallery:
+        weight: 35
+        enabled: true
+      image_gallery_items:
+        weight: 36
         enabled: false
       information_block:
         weight: 2
@@ -61,9 +97,12 @@ settings:
       promotions:
         weight: 9
         enabled: true
+      side_by_side_content:
+        weight: 41
+        enabled: true
       tabs_content_by_reference:
         weight: 26
-        enabled: false
+        enabled: true
       tabs_content_by_reference_items:
         weight: 27
         enabled: false
@@ -73,4 +112,13 @@ settings:
       tabs_content_by_view_items:
         weight: 15
         enabled: false
+      testimonial_card_item:
+        weight: 47
+        enabled: false
+      testimonial_cards:
+        weight: 46
+        enabled: true
+      webform_block:
+        weight: 48
+        enabled: true
 field_type: entity_reference_revisions

@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.rooms.field_banner
     - field.field.node.rooms.field_featured_on_frontpage_bann
     - field.field.node.rooms.field_mobile_thumbnail
+    - field.field.node.rooms.field_room_code
     - field.field.node.rooms.field_section
     - field.field.node.rooms.field_teaser_summary
     - node.type.rooms
@@ -49,6 +50,15 @@ content:
         attribute: lazy
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_room_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 103
     region: content
   field_section:
     type: entity_reference_revisions_entity_view
