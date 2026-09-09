@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.hero_slider
+    - field.field.paragraph.side_by_side_content.field_class
+    - field.field.paragraph.side_by_side_content.field_id
     - field.field.paragraph.side_by_side_content.field_left_content
     - field.field.paragraph.side_by_side_content.field_right_content
     - field.field.paragraph.side_by_side_content.field_text_alignment
@@ -24,6 +26,8 @@ content:
     weight: 1
     region: ds_content
 hidden:
+  field_class: true
+  field_id: true
   field_left_content: true
   field_right_content: true
   field_text_alignment: true
