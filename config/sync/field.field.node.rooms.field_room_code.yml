@@ -10,7 +10,7 @@ field_name: field_room_code
 entity_type: node
 bundle: rooms
 label: 'Room Code'
-description: ''
+description: 'Add multiple room code separated by comma.'
 required: false
 translatable: false
 default_value: {  }

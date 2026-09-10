@@ -1,0 +1,19 @@
+uuid: 64f4c641-b939-43fc-9456-03d5677a5e8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dress_code
+    - node.type.dining
+id: node.dining.field_dress_code
+field_name: field_dress_code
+entity_type: node
+bundle: dining
+label: 'Dress Code'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

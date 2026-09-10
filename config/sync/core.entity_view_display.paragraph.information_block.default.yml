@@ -6,9 +6,11 @@ dependencies:
     - field.field.paragraph.information_block.field_class
     - field.field.paragraph.information_block.field_content
     - field.field.paragraph.information_block.field_id
+    - field.field.paragraph.information_block.field_text_alignment
     - field.field.paragraph.information_block.field_title
     - paragraphs.paragraphs_type.information_block
   module:
+    - options
     - text
 id: paragraph.information_block.default
 targetEntityType: paragraph
@@ -21,6 +23,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_text_alignment:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
     region: content
   field_title:
     type: string

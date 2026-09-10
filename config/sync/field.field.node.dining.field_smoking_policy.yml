@@ -1,0 +1,22 @@
+uuid: c21202e3-4633-4b40-b8ed-b39e1943a978
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_smoking_policy
+    - node.type.dining
+  module:
+    - text
+id: node.dining.field_smoking_policy
+field_name: field_smoking_policy
+entity_type: node
+bundle: dining
+label: 'Smoking Policy'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

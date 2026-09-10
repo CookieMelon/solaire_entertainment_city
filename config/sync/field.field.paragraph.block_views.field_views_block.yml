@@ -21,6 +21,5 @@ settings:
   selection: blocks
   selection_settings:
     plugin_ids:
-      'views_block:rooms_suite-block_1': 'views_block:rooms_suite-block_1'
-      'views_block:solaire_frontpage-block_1': 'views_block:solaire_frontpage-block_1'
+      'views_block:related_content-block_1': 'views_block:related_content-block_1'
 field_type: block_field

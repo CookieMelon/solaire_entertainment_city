@@ -1,0 +1,16 @@
+uuid: e9258448-ddc8-4064-a614-89e95dd70036
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cuisine
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.cuisine
+target_entity_type_id: taxonomy_term
+target_bundle: cuisine
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,71 @@
+{# {% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+{% for row in rows %}
+  {%
+    set row_classes = [
+      default_row_class ? 'views-row',
+    ]
+  %}
+  <div{{ row.attributes.addClass(row_classes) }}>
+    {{- row.content -}}
+  </div>
+{% endfor %} #}
+
+
+{# {% set contents = [] %}
+{% for row in rows %}
+  {% set contents = contents|merge([row.content]) %}
+{% endfor %} #}
+
+{# {% set contents = [] %}
+{% for row in rows %}
+  {% set wrapped_content %}
+    <div class="swiper-slide">
+      {{ row.content }}
+    </div>
+  {% endset %}
+
+  {% set contents = contents|merge([wrapped_content]) %}
+{% endfor %}
+
+{% embed 'solaire_sec:swiper' with {
+  cardItem: contents,
+  slidesPerView: 3,
+  options: "{\"breakpoint\":{\"550\":{\"slidesPerView\":1,\"slidesPerGroup\":1,\"centeredSlides\":false}},\"navigationDisabledClass\":\"swiper-navigation-disabled\"}"
+} %}
+
+  {% block pagination %}
+  {% endblock %}
+
+  {% block scrollbar %}
+  {% endblock %}
+
+{% endembed %} #}
+
+{% set contents = [] %}
+
+{% for row in rows %}
+  {% set contents = contents|merge([
+    {
+      '#type': 'container',
+      '#attributes': {
+        'class': ['swiper-slide']
+      },
+      'content': row.content
+    }
+  ]) %}
+{% endfor %}
+
+{% embed 'solaire_sec:swiper' with {
+    cardItem: contents,
+    slidesPerView: 3
+  } %}
+
+  {% block pagination %}
+  {% endblock %}
+
+  {% block scrollbar %}
+  {% endblock %}
+
+{% endembed %}

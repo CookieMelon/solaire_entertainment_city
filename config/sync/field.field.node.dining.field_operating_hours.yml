@@ -1,0 +1,22 @@
+uuid: 588027ed-c9c9-4c46-885a-34dd8b5c11f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_operating_hours
+    - node.type.dining
+  module:
+    - text
+id: node.dining.field_operating_hours
+field_name: field_operating_hours
+entity_type: node
+bundle: dining
+label: 'Operating Hours'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

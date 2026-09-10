@@ -1,0 +1,9 @@
+uuid: b2ed836b-95a5-460f-8bad-5f33748c799c
+langcode: en
+status: true
+dependencies: {  }
+name: Cuisine
+vid: cuisine
+description: 'Dining cuisine types'
+weight: 0
+new_revision: false

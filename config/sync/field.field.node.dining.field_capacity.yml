@@ -1,0 +1,22 @@
+uuid: 38f947f2-686a-4a97-b93f-fbe2daac6b9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_capacity
+    - node.type.dining
+  module:
+    - text
+id: node.dining.field_capacity
+field_name: field_capacity
+entity_type: node
+bundle: dining
+label: Capacity
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,14 @@
+id: node_title
+label: 'Node Title'
+ui_limit: rooms|default
+type: token
+type_label: 'Token field'
+entities:
+  node: node
+properties:
+  content:
+    value: '[node:title]'
+    format: plain_text
+  force_global_entity: false
+  use_global_entity: false
+  use_global_view_token: false

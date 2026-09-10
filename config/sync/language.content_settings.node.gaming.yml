@@ -15,4 +15,4 @@ id: node.gaming
 target_entity_type_id: node
 target_bundle: gaming
 default_langcode: site_default
-language_alterable: true
+language_alterable: false

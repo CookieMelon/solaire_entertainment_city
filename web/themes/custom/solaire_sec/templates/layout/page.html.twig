@@ -97,6 +97,14 @@
       {{ page.content }}
     </div>{# /.layout-content #}
 
+    {% if page.content_below %}
+      <div class="content-below">
+        {{ page.content_below }}
+      </div>
+    {% endif %}
+
+    
+
     {% if page.sidebar_first %}
       <aside class="layout-sidebar-first">
         {{ page.sidebar_first }}

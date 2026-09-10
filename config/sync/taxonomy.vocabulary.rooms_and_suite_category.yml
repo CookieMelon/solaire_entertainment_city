@@ -1,0 +1,9 @@
+uuid: 74890003-724d-4496-8e34-a82587763cb8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Rooms and Suite Category'
+vid: rooms_and_suite_category
+description: null
+weight: 0
+new_revision: false

@@ -3,24 +3,54 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.block_views.field_class
     - field.field.paragraph.block_views.field_content
+    - field.field.paragraph.block_views.field_id
+    - field.field.paragraph.block_views.field_text_alignment
     - field.field.paragraph.block_views.field_title
     - field.field.paragraph.block_views.field_views_block
+    - field.field.paragraph.block_views.field_views_display
     - paragraphs.paragraphs_type.block_views
   module:
     - block_field
+    - options
     - text
 id: paragraph.block_views.default
 targetEntityType: paragraph
 bundle: block_views
 mode: default
 content:
+  field_class:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 6
+    region: content
   field_content:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_text_alignment:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
     region: content
   field_title:
     type: string
@@ -37,5 +67,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_views_display:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
     region: content
 hidden: {  }

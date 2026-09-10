@@ -14,4 +14,4 @@ description: 'Use <em>Rooms</em> for creating pages under <strong>Rooms and Suit
 help: null
 new_revision: true
 preview_mode: 1
-display_submitted: true
+display_submitted: false

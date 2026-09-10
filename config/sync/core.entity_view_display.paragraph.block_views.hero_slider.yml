@@ -4,9 +4,13 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.hero_slider
+    - field.field.paragraph.block_views.field_class
     - field.field.paragraph.block_views.field_content
+    - field.field.paragraph.block_views.field_id
+    - field.field.paragraph.block_views.field_text_alignment
     - field.field.paragraph.block_views.field_title
     - field.field.paragraph.block_views.field_views_block
+    - field.field.paragraph.block_views.field_views_display
     - paragraphs.paragraphs_type.block_views
   module:
     - text
@@ -32,4 +36,8 @@ content:
     weight: 1
     region: ds_content
 hidden:
+  field_class: true
+  field_id: true
+  field_text_alignment: true
   field_views_block: true
+  field_views_display: true

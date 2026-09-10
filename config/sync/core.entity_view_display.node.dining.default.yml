@@ -3,10 +3,19 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.dining.field_age_limit
     - field.field.node.dining.field_banner
+    - field.field.node.dining.field_capacity
+    - field.field.node.dining.field_category
+    - field.field.node.dining.field_contact_details
+    - field.field.node.dining.field_dining_cuisine
+    - field.field.node.dining.field_dress_code
     - field.field.node.dining.field_featured_on_frontpage_bann
+    - field.field.node.dining.field_floor_level
     - field.field.node.dining.field_mobile_thumbnail
+    - field.field.node.dining.field_operating_hours
     - field.field.node.dining.field_section
+    - field.field.node.dining.field_smoking_policy
     - field.field.node.dining.field_teaser_summary
     - node.type.dining
   module:
@@ -20,6 +29,15 @@ targetEntityType: node
 bundle: dining
 mode: default
 content:
+  field_age_limit:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 111
+    region: content
   field_banner:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -29,6 +47,37 @@ content:
     third_party_settings: {  }
     weight: 0
     region: ds_content
+  field_capacity:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_contact_details:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_dining_cuisine:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_dress_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 105
+    region: content
   field_featured_on_frontpage_bann:
     type: boolean
     label: above
@@ -38,6 +87,15 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_floor_level:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 110
     region: content
   field_mobile_thumbnail:
     type: image
@@ -49,6 +107,13 @@ content:
         attribute: lazy
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_operating_hours:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
     region: content
   field_section:
     type: entity_reference_revisions_entity_view
@@ -88,6 +153,13 @@ content:
             suffix: ''
     weight: 1
     region: ds_content
+  field_smoking_policy:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 108
+    region: content
   field_teaser_summary:
     type: text_default
     label: above
@@ -101,4 +173,5 @@ content:
     weight: 100
     region: content
 hidden:
+  field_category: true
   langcode: true

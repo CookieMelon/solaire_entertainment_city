@@ -1,0 +1,23 @@
+{% if section_view_display === 'swipper' %}
+  {% if rows %}
+    {% embed 'solaire_sec:swiper' with {
+      cardItem: rows,
+      options: "{\"breakpoint\":{\"550\":{\"slidesPerView\":1,\"slidesPerGroup\":1,\"centeredSlides\":false},\"768\":{\"slidesPerView\":2,\"slidesPerGroup\":1,\"centeredSlides\":false},\"1024\":{\"slidesPerView\":3,\"slidesPerGroup\":1,\"centeredSlides\":false}}}",
+      slidesPerView: 3
+    } %}
+
+      {% block pagination %}
+      {% endblock %}
+
+      {% block navigation %}
+      {% endblock %}
+
+      {% block scrollbar %}
+      {% endblock %}
+
+    {% endembed %}
+  {% endif %}
+
+{% else %}
+  {{ rows }}
+{% endif %}

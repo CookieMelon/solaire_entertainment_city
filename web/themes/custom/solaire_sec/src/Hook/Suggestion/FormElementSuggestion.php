@@ -33,7 +33,7 @@ class FormElementSuggestion {
   ): void {
     $element = $variables['element'] ?? [];
 
-    if ($element && !is_null($element['#attributes'])) {
+    if ($element && isset($element['#attributes'])) {
       if ($element['#attributes'] instanceof Attribute) {
         $attributes = $element['#attributes']->toArray();
         if (isset($attributes['id']) && $attributes['id'] === 'edit-i-agree--description') {

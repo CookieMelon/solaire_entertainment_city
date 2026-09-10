@@ -23,6 +23,7 @@ use Drupal\solaire_sec\Hook\Preprocess\Paragraph\TabsContentByReferenceVariables
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\TestimonialCardsVariablesBuilder;
 use Psr\Container\ContainerInterface;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\InformationBlock;
+use Drupal\solaire_sec\Hook\Preprocess\Paragraph\BlockViewsVariablesBuilder;
 
 class ParagraphPreprocess implements ContainerInjectionInterface {
   /**
@@ -206,6 +207,18 @@ class ParagraphPreprocess implements ContainerInjectionInterface {
       $variables = array_merge($variables, $builder->buildTabsContentByReferenceVariables($paragraph));
     }
 
+    // Blocks.
+    if ($paragraph->bundle() === 'block_views') {
+      $builder = new BlockViewsVariablesBuilder(
+        $this->blockManager,
+        $this->contextRepository,
+        $this->contextHandler,
+        $this->entityRepository
+      );
+      $variables = array_merge($variables, $builder->buildBlockViewsVariables($paragraph));
+    }
+
+    // d($variables);
     return $variables;
   }
 }
