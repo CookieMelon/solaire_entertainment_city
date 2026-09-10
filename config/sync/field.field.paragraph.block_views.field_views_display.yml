@@ -1,0 +1,21 @@
+uuid: 8afe4d9d-081f-4abd-a92f-6c3f4044067d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_views_display
+    - paragraphs.paragraphs_type.block_views
+  module:
+    - options
+id: paragraph.block_views.field_views_display
+field_name: field_views_display
+entity_type: paragraph
+bundle: block_views
+label: 'Views Display'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

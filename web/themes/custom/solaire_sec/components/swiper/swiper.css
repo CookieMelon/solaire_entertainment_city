@@ -22,6 +22,17 @@
   font-size: 1rem;
   color: var(--background);;
 }
+/* .main-swiper .swiper-slide {
+  height: auto;
+}
+
+.main-swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+} */
 
 @media (min-width: 768px) {
   .featured_mosaic .swiper-wrapper {

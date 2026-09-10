@@ -1,0 +1,35 @@
+uuid: 61dfdfd4-5690-4732-831e-1bd129213e3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.card
+    - field.field.paragraph.block_views.field_class
+    - field.field.paragraph.block_views.field_content
+    - field.field.paragraph.block_views.field_id
+    - field.field.paragraph.block_views.field_text_alignment
+    - field.field.paragraph.block_views.field_title
+    - field.field.paragraph.block_views.field_views_block
+    - field.field.paragraph.block_views.field_views_display
+    - paragraphs.paragraphs_type.block_views
+  module:
+    - options
+id: paragraph.block_views.card
+targetEntityType: paragraph
+bundle: block_views
+mode: card
+content:
+  field_text_alignment:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  field_class: true
+  field_content: true
+  field_id: true
+  field_title: true
+  field_views_block: true
+  field_views_display: true

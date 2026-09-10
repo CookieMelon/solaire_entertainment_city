@@ -2,13 +2,29 @@
 
 namespace Drupal\solaire_sec\Hook\Preprocess;
 
+use Drupal\node\Entity\Node;
 use Drupal\node\NodeInterface;
 use Drupal\Core\Hook\Attribute\Hook;
 
 /**
  * Hook implementations for solaire_sec.
  */
-class NodeOffers {
+class NodePreprocess {
+  /**
+   * Load a node by its ID.
+   *
+   * @param int $node_id
+   *   The node ID.
+   *
+   * @return \Drupal\node\NodeInterface|null
+   *   The loaded node, or NULL when no node exists for the ID.
+   */
+  public function loadNodeById(int $node_id): ?NodeInterface {
+    $node = Node::load($node_id);
+
+    return $node instanceof NodeInterface ? $node : NULL;
+  }
+
   /**
    * @file
    * Functions to support theming.

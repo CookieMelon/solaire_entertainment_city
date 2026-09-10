@@ -1,0 +1,29 @@
+uuid: 695ad6c9-09d4-4a9f-a24f-4c98af803cb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dining_cuisine
+    - node.type.dining
+    - taxonomy.vocabulary.cuisine
+id: node.dining.field_dining_cuisine
+field_name: field_dining_cuisine
+entity_type: node
+bundle: dining
+label: Cuisine
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      cuisine: cuisine
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

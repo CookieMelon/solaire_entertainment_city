@@ -1,0 +1,23 @@
+uuid: 5b9202dd-de00-462e-be01-2479c4bc47ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_alignment
+    - paragraphs.paragraphs_type.information_block
+  module:
+    - options
+id: paragraph.information_block.field_text_alignment
+field_name: field_text_alignment
+entity_type: paragraph
+bundle: information_block
+label: 'Text Alignment'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

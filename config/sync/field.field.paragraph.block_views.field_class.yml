@@ -1,0 +1,19 @@
+uuid: f1fe5dc9-3082-4e38-a8f4-f1232dac08eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_class
+    - paragraphs.paragraphs_type.block_views
+id: paragraph.block_views.field_class
+field_name: field_class
+entity_type: paragraph
+bundle: block_views
+label: Class
+description: 'Use this field to add a custom class for this component.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
