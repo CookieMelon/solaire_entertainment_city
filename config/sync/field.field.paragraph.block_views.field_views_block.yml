@@ -21,5 +21,8 @@ settings:
   selection: blocks
   selection_settings:
     plugin_ids:
+      'views_block:offers-block_1': 'views_block:offers-block_1'
+      'views_block:offers-block_2': 'views_block:offers-block_2'
+      'views_block:offers-block_3': 'views_block:offers-block_3'
       'views_block:related_content-block_1': 'views_block:related_content-block_1'
 field_type: block_field
