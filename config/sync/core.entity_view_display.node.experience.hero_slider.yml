@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.hero_slider
     - field.field.node.experience.field_banner
+    - field.field.node.experience.field_category
     - field.field.node.experience.field_featured_on_frontpage_bann
     - field.field.node.experience.field_mobile_thumbnail
     - field.field.node.experience.field_section
@@ -107,4 +108,5 @@ content:
     weight: 100
     region: content
 hidden:
+  field_category: true
   langcode: true
