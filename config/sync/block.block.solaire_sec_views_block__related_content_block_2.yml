@@ -1,0 +1,38 @@
+uuid: 03bdd495-f876-47e0-9c7f-b87a61cd72ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.related_content
+  module:
+    - node
+    - system
+    - views
+  theme:
+    - solaire_sec
+id: solaire_sec_views_block__related_content_block_2
+theme: solaire_sec
+region: content_below
+weight: 0
+provider: null
+plugin: 'views_block:related_content-block_2'
+settings:
+  id: 'views_block:related_content-block_2'
+  label: 'Other Recreations & Activities'
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: 'Other Recreations & Activities'
+  items_per_page: null
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      experience: experience
+  request_path:
+    id: request_path
+    negate: true
+    pages: /experience/the-space-at-solaire

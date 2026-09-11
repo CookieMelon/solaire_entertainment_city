@@ -1,6 +1,6 @@
 id: node_title
 label: 'Node Title'
-ui_limit: rooms|default
+ui_limit: "rooms|default\r\nexperience|default\r\ngaming|default"
 type: token
 type_label: 'Token field'
 entities:

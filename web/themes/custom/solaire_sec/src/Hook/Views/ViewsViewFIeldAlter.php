@@ -102,29 +102,36 @@ class ViewsViewFieldAlter {
     $view = $variables['view'];
 
     if ($view->id() === 'related_content' || !empty($view->args[0])) {
+      /** @var \Drupal\views\ViewExecutable $view */
+      $view = $variables['view'];
 
-      $node_preprocess = new NodePreprocess();
-      $node = $node_preprocess->loadNodeById((int) $view->args[0]);
+      if ($view->id() === 'related_content' && isset($view->args[0])) {
+        $node_preprocess = new NodePreprocess();
+        $node = $node_preprocess->loadNodeById((int) $view->args[0]);
 
-      if ($node) {
-        if ($node->hasField('field_section') && !$node->get('field_section')->isEmpty()) {
-          $ids = array_column(
-            $node->get('field_section')->getValue(),
-            'target_id'
-          );
+        if ($node) {
+          if ($node->hasField('field_section') && !$node->get('field_section')->isEmpty()) {
+            $ids = array_column(
+              $node->get('field_section')->getValue(),
+              'target_id'
+            );
 
-          $paragraphs = ParagraphHelper::loadParagraphsByIds($this->entityTypeManager, $ids);
+            $paragraphs = ParagraphHelper::loadParagraphsByIds($this->entityTypeManager, $ids);
 
-          foreach($paragraphs as $paragraph) {
-            if ($viewDisplay = ParagraphHelper::getParagraphFieldValue(
-              $paragraph, 
-              'field_views_display', 
-              $this->entityRepository
-            )) {
-              $variables['section_view_display'] = $viewDisplay;
+            foreach ($paragraphs as $paragraph) {
+              if ($viewDisplay = ParagraphHelper::getParagraphFieldValue(
+                $paragraph,
+                'field_views_display',
+                $this->entityRepository
+              )) {
+                $variables['section_view_display'] = $viewDisplay;
+              }
             }
           }
         }
+      } else {
+        // Handle the case where $view->args[0] is not set
+        $variables['section_view_display'] = null; // or some default value
       }
     }
   }
